@@ -5,10 +5,6 @@ RSpec.describe User, type: :model do
     User.create(name: "test", description: "hoge")
   end
 
-  after(:each) do
-    User.all.map{|u| u.destroy }
-  end
-
   it do
     u = User.last
     expect(u.name).to eq("test")

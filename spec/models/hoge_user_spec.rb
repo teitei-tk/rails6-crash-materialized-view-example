@@ -7,11 +7,6 @@ RSpec.describe HogeUser, type: :model do
     ApplicationRecord.connection.execute("REFRESH MATERIALIZED VIEW hoge_users")
   end
 
-  after(:each) do
-    User.all.map{|u| u.destroy }
-    Company.all.map{|u| u.destroy }
-  end
-
   it do
     u = HogeUser.first
     expect(u.user_name).to eq("test")
