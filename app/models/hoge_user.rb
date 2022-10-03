@@ -1,0 +1,2 @@
+class HogeUser < ApplicationRecord
+end
